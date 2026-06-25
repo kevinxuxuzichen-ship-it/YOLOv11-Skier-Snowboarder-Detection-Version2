@@ -1,0 +1,8 @@
+names:
+- skier
+- snowboarder
+nc: 2
+path: .
+test: test/images
+train: train/images
+val: val/images
