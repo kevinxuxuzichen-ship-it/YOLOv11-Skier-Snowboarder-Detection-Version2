@@ -22,6 +22,7 @@ Phase 2 uses **Cross-Validation** to ensure that the model doesn't rely on "luck
 - **Deployment**: Includes exported `.onnx` weights for high-performance inference.
 
 ## 📂 Repository Structure
-- `Analysis/`: Contains confusion matrices and PR curves for each fold.
-- `Models/`: Optimized `.pt` and `.onnx` weight files.
-- `data.yaml`: Dataset configuration for skiers and snowboarders.
+- `results/` : Contains comprehensive training logs and visualization charts (e.g., confusion matrices, PR curves).
+- `weights/` : Stores the optimized model weights (`.pt` and `.onnx`).
+- `data.yaml` : Dataset configuration for skiers and snowboarders.
+- `train_version_2.py` : Model training script.
