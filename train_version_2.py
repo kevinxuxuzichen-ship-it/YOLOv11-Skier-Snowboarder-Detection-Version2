@@ -2,21 +2,21 @@ from ultralytics import YOLO
 import os
 
 def main():
-    # 生产模型：使用更大的 Epoch 和早停机制
+    # Production-grade model: Use more training epochs and early stopping mechanism
     model = YOLO('yolo11n.pt')
 
-    # 生产级配置
+    # Production-level training configuration
     model.train(
         data='data.yaml',
-        epochs=200,            # 增加 Epoch 确保收敛
-        patience=50,           # 如果 50 轮不提升则早停
+        epochs=200,            # Increase epochs to guarantee full convergence
+        patience=50,           # Trigger early stop if no performance improvement after 50 epochs
         imgsz=640,
         batch=16,
         device=0,
         project='Ski_Detection_Production',
         name='model2_final',
-        optimizer='auto',      # 自动选择优化器
-        seed=42,               # 固定随机种子以便复现
+        optimizer='auto',      # Automatically select the optimizer
+        seed=42,               # Fix random seed for reproducible training results
         save=True,
         exist_ok=True
     )
